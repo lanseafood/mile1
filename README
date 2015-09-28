@@ -1,0 +1,76 @@
+//READ ME FOR LANSSIE MINGYUE MA FOR MILESTONE 1
+EMAIL: mma48@gatech.edu
+PRISM: mma48
+
+ii. Detail which requirements you have completed, which are incomplete, and which
+are buggy (be specific)
+
+Environment:
+Hilly terrain with dirt, grass, and rocky areas. A few prefab trees, and some trees made by hand(the ones with no leaves). Bushes and weeds from other sources. There are two yellow ramps and 3 pink boxes, and 1 wooden box. Had to add colliders and rigid bodies for certain objects to allow for character to move the object. There might be a slight problem with collision with the wooden box, because I needed to play around a lot with the masses in this environment. 
+
+Character:
+Took a character from the assest store, which will be noted in iii. He's a knight character but I removed his sword since it would not work with the free animations that I could get. The movement is controlled through Root Motion. I had to change this since the original character did not support root motion. 
+
+Mechanim Animation Controller:
+Input Parameters:
+L, R, U, D, and space keys.
+L, R offer turns only when the character is moving forwards or backwards. 
+D moves backwards at a walking pace. 
+U moved from walking if pressed lightly to running if pressed more firmly/continuously.
+
+States:
+Idle, Run (forward, L, R), Walk (forward, L, R, backwards, L, R), and Jump-Roll. 
+
+KnightAC (Animation Controller):
+Start at Idle
+
+Blend Trees:
+1 Blend tree for
+	Walking Backwards, WB with turning L, and WB with turning R.
+
+1 Blend tree Locomotion
+-2 blend trees Walk Forwards and Run. 
+	Walk Forwards, WF with turning L, WF with turning R. 
+	Run, R with turning L, R with turning R. 
+
+Jump is attached to running, so you can't jump in any other state. 
+
+KnightControlScript:
+Simple script caturing input keys from user to move character. 
+
+
+
+iii. Detail any and all resources that were acquired outside of class and what it is
+being used for(e.g. Asset Bundles downloaded from the Asset Store for double
+sided cutout shaders, or this file was found on the internet has link
+http://example.com/test and does the orbit camera tracking ).
+
+The following assets were taken from the store (free):
+Cha_data: where I got the character
+Raw mocap data: where I got the animations
+AfricanBrush, Tree-Tectures, WorldBuilder: where I got some prefabs for trees. 
+Medival Boxes: where I got the wooden box.
+Unity's Prototyping: where I got the ramp and pink boxes. 
+
+iv. Detail any special install instructions the grader will need to be aware of for
+building and running your code
+no special instructions to be aware of. 
+
+
+
+v. Detail exact steps grader should take to demonstrate that your game meets
+assignment requirements.
+
+You should explore the terrain, walk/run up the ramps, and crash into the pink boxes and move around the wooden box by bumping into it. Tryout the locomotion and movement and turning abilities.Trees be block your way, but plants will be able to be walked through. You can walk by tapping the up button, run by pressing it harder, walk backwards, and turn walking or running in either direction. You can jump-roll by pressing the space button (only when running!). 
+
+
+
+vi. Which scene file is the main file that should be opened first in Unity
+
+m1.unity
+
+
+
+vii. URL of the web page where you posted your assignment
+
+http://www.prism.gatech.edu/~mma48/mile1/m1_play.html
